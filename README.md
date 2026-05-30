@@ -6,10 +6,8 @@ It can be referenced by specifying github repository dependency specification.
 for example, in package.json
 ```
   dependencies: {
-    "@beam/ax": "github:yahiro07/beam#0.1.0&path:/beams",
+    "beams": "github:yahiro07/beam#0.2.0",
   }
 ```
-Since actual package are under the sub folders in this repository, only pnpm can be resolve this.
-
 
 It's supposed to be imported from vite and typescript with esm, other environments are not considered.
