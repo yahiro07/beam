@@ -1,7 +1,6 @@
 {
   "name": "@yahiro07/beams",
   "type": "module",
-  "private": true,
   "files": [
     "dist"
   ],
