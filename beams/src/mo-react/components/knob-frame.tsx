@@ -1,5 +1,5 @@
-import { clampValue } from "../../ax/number-utils";
-import { startDragSession } from "../../ax-ui/drag-session";
+import { clampValue } from "../../ax/number-utils.js";
+import { startDragSession } from "../../ax-ui/drag-session.js";
 import { ReactNode } from "react";
 
 export function KnobFrame(props: {

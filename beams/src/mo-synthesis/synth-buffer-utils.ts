@@ -1,4 +1,4 @@
-import { mixValue } from "../ax/number-utils";
+import { mixValue } from "../ax/number-utils.js";
 
 export function readBufferInterpolated(
   buffer: number[] | Float32Array,

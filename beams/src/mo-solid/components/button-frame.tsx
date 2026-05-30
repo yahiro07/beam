@@ -1,4 +1,4 @@
-/** @jsxImportSource solid-js */
+/** @jsxImportSource solid-js/h */
 import { JSXElement } from "solid-js";
 
 export function ButtonFrame(props: {

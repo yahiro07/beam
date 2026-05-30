@@ -1,5 +1,5 @@
 import { useLayoutEffect, useState } from "react";
-import { Size } from "../../ax-ui/common-types";
+import { Size } from "../../ax-ui/common-types.js";
 
 function setupDomSizeAffecter(
   element: HTMLElement,

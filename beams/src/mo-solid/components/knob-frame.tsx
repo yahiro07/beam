@@ -1,6 +1,6 @@
-/** @jsxImportSource solid-js */
-import { clampValue } from "../../ax/number-utils";
-import { startDragSession } from "../../ax-ui/drag-session";
+/** @jsxImportSource solid-js/h */
+import { clampValue } from "../../ax/number-utils.js";
+import { startDragSession } from "../../ax-ui/drag-session.js";
 import { JSXElement } from "solid-js";
 
 export function KnobFrame(props: {

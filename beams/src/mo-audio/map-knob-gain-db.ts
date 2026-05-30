@@ -1,4 +1,4 @@
-import { linearInterpolate } from "../ax/number-utils";
+import { linearInterpolate } from "../ax/number-utils.js";
 
 export function mapKnobGainDb(
   value: number,

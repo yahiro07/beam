@@ -1,4 +1,4 @@
-import { createIntervalTimer } from "./timer-utils";
+import { createIntervalTimer } from "./timer-utils.js";
 
 type Sequencer = {
   processStep?(stepIndex: number): void;

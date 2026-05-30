@@ -1,5 +1,5 @@
 import { ReactNode, useMemo, useRef } from "react";
-import { useDomElementSize } from "../hooks/use-dom-element-size";
+import { useDomElementSize } from "../hooks/use-dom-element-size.js";
 
 export function ScalerBoxAutoSized(props: { children: ReactNode }) {
   const baseDivRef = useRef<HTMLDivElement>(null);

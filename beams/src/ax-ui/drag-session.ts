@@ -1,4 +1,4 @@
-import { Point } from "./common-types";
+import { Point } from "./common-types.js";
 
 export type DragHandlerEvent = {
   position: Point;
