@@ -1,7 +1,5 @@
-type Point = {
-  x: number;
-  y: number;
-};
+import { Point } from "./common-types";
+
 export type DragHandlerEvent = {
   position: Point;
   originalPosition: Point;

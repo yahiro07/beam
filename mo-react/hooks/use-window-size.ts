@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Size } from "./common-types";
+import { Size } from "../../ax-ui/common-types";
 
 export function useWindowSize(): Size {
   const [size, setSize] = useState<Size>({
