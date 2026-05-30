@@ -6,7 +6,6 @@ export type DragHandlerEvent = {
   position: Point;
   originalPosition: Point;
 };
-
 export function startDragSession(
   e0: PointerEvent,
   callbacks: {
@@ -24,15 +23,14 @@ export function startDragSession(
 
   const coordinate = options?.coordinate ?? "page";
   const win = e0.view ?? window;
-
-  const elementRect = el.getBoundingClientRect();
+  const elementRect = coordinate === 'relative' ? el.getBoundingClientRect(): undefined;
 
   const getPointerPosition = (e: PointerEvent): Point => {
     switch (coordinate) {
       case "relative": {
         return {
-          x: e.clientX - elementRect.left,
-          y: e.clientY - elementRect.top,
+          x: e.clientX - (elementRect?.left ?? 0),
+          y: e.clientY - (elementRect?.top ?? 0),
         };
       }
       case "page":
