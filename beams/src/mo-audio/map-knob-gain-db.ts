@@ -3,8 +3,8 @@ import { linearInterpolate } from "../ax/number-utils.js";
 export function mapKnobGainDb(
   value: number,
   knobCenter: number,
+  dbBottom = -60,
   dbTop = 12,
-  dbBottom = -80,
 ) {
   let db = 0;
   if (value > knobCenter) {
