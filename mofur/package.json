@@ -16,6 +16,7 @@
       "types": "./dist/ax-ui/index.d.mts",
       "default": "./dist/ax-ui/index.mjs"
     },
+    "./ax-ui/utility-classes.css": "./dist/ax-ui/utility-classes.css",
     "./mo": {
       "types": "./dist/mo/index.d.mts",
       "default": "./dist/mo/index.mjs"
@@ -41,7 +42,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsdown"
+    "build": "tsdown && cp src/ax-ui/utility-classes.css dist/ax-ui/utility-classes.css"
   },
   "peerDependencies": {
     "react": "^19.0.0",
