@@ -1,0 +1,56 @@
+{
+  "name": "mofur",
+  "type": "module",
+  "private": true,
+  "main": "./dist/ax/index.js",
+  "exports": {
+    "./ax": {
+      "types": "./dist/ax/index.d.ts",
+      "default": "./dist/ax/index.js"
+    },
+    "./ax-react": {
+      "types": "./dist/ax-react/index.d.ts",
+      "default": "./dist/ax-react/index.js"
+    },
+    "./ax-ui": {
+      "types": "./dist/ax-ui/index.d.ts",
+      "default": "./dist/ax-ui/index.js"
+    },
+    "./mo": {
+      "types": "./dist/mo/index.d.ts",
+      "default": "./dist/mo/index.js"
+    },
+    "./mo-audio": {
+      "types": "./dist/mo-audio/index.d.ts",
+      "default": "./dist/mo-audio/index.js"
+    },
+    "./mo-react": {
+      "types": "./dist/mo-react/index.d.ts",
+      "default": "./dist/mo-react/index.js"
+    },
+    "./mo-synthesis": {
+      "types": "./dist/mo-synthesis/index.d.ts",
+      "default": "./dist/mo-synthesis/index.js"
+    },
+    "./mx-audio": {
+      "types": "./dist/mx-audio/index.d.ts",
+      "default": "./dist/mx-audio/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tsup": "^8.5.1",
+    "typescript": "~6.0.3"
+  }
+}
