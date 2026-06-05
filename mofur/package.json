@@ -2,7 +2,7 @@
   "name": "mofur",
   "type": "module",
   "version": "0.1.0",
-  "description": "Utility collection for web applications.",
+  "description": "Utility collection for web applications with React.",
   "author": "yahiro",
   "license": "MIT",
   "main": "./dist/ax/index.js",
