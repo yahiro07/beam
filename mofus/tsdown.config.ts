@@ -1,6 +1,11 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
+  platform: "browser",
+  format: ["esm"],
+  dts: true,
+  clean: true,
+  outDir: "dist",
   entry: {
     "ax/index": "../mofur/src/ax/index.ts",
     "ax-ui/index": "../mofur/src/ax-ui/index.ts",
@@ -12,10 +17,6 @@ export default defineConfig({
     "ax-solid/index": "src/ax-solid/index.ts",
     "mo-solid/index": "src/mo-solid/index.ts",
   },
-  format: ["esm"],
-  dts: true,
-  clean: true,
-  outDir: "dist",
   deps: {
     neverBundle: ["solid-js"],
   },
