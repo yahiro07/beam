@@ -1,4 +1,4 @@
-import { defineConfig } from "tsup";
+import { defineConfig } from "tsdown";
 
 export default defineConfig({
   entry: {
@@ -15,5 +15,7 @@ export default defineConfig({
   dts: true,
   clean: true,
   outDir: "dist",
-  external: ["react", "react-dom"],
+  deps: {
+    neverBundle: ["react", "react-dom"],
+  },
 });

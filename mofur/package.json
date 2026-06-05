@@ -2,46 +2,46 @@
   "name": "mofur",
   "type": "module",
   "private": true,
-  "main": "./dist/ax/index.js",
+  "main": "./dist/ax/index.mjs",
   "exports": {
     "./ax": {
-      "types": "./dist/ax/index.d.ts",
-      "default": "./dist/ax/index.js"
+      "types": "./dist/ax/index.d.mts",
+      "default": "./dist/ax/index.mjs"
     },
     "./ax-react": {
-      "types": "./dist/ax-react/index.d.ts",
-      "default": "./dist/ax-react/index.js"
+      "types": "./dist/ax-react/index.d.mts",
+      "default": "./dist/ax-react/index.mjs"
     },
     "./ax-ui": {
-      "types": "./dist/ax-ui/index.d.ts",
-      "default": "./dist/ax-ui/index.js"
+      "types": "./dist/ax-ui/index.d.mts",
+      "default": "./dist/ax-ui/index.mjs"
     },
     "./mo": {
-      "types": "./dist/mo/index.d.ts",
-      "default": "./dist/mo/index.js"
+      "types": "./dist/mo/index.d.mts",
+      "default": "./dist/mo/index.mjs"
     },
     "./mo-audio": {
-      "types": "./dist/mo-audio/index.d.ts",
-      "default": "./dist/mo-audio/index.js"
+      "types": "./dist/mo-audio/index.d.mts",
+      "default": "./dist/mo-audio/index.mjs"
     },
     "./mo-react": {
-      "types": "./dist/mo-react/index.d.ts",
-      "default": "./dist/mo-react/index.js"
+      "types": "./dist/mo-react/index.d.mts",
+      "default": "./dist/mo-react/index.mjs"
     },
     "./mo-synthesis": {
-      "types": "./dist/mo-synthesis/index.d.ts",
-      "default": "./dist/mo-synthesis/index.js"
+      "types": "./dist/mo-synthesis/index.d.mts",
+      "default": "./dist/mo-synthesis/index.mjs"
     },
     "./mx-audio": {
-      "types": "./dist/mx-audio/index.d.ts",
-      "default": "./dist/mx-audio/index.js"
+      "types": "./dist/mx-audio/index.d.mts",
+      "default": "./dist/mx-audio/index.mjs"
     }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsdown"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -50,6 +50,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "tsdown": "^0.22.2",
     "tsup": "^8.5.1",
     "typescript": "~6.0.3"
   }
