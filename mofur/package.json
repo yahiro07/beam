@@ -1,41 +1,45 @@
 {
   "name": "mofur",
   "type": "module",
-  "private": true,
-  "main": "./dist/ax/index.mjs",
+  "version": "0.1.0",
+  "description": "Utility collection for web applications.",
+  "author": "yahiro",
+  "license": "MIT",
+  "main": "./dist/ax/index.js",
+  "types": "./dist/ax/index.d.ts",
   "exports": {
     "./ax": {
-      "types": "./dist/ax/index.d.mts",
-      "default": "./dist/ax/index.mjs"
+      "types": "./dist/ax/index.d.ts",
+      "default": "./dist/ax/index.js"
     },
     "./ax-react": {
-      "types": "./dist/ax-react/index.d.mts",
-      "default": "./dist/ax-react/index.mjs"
+      "types": "./dist/ax-react/index.d.ts",
+      "default": "./dist/ax-react/index.js"
     },
     "./ax-ui": {
-      "types": "./dist/ax-ui/index.d.mts",
-      "default": "./dist/ax-ui/index.mjs"
+      "types": "./dist/ax-ui/index.d.ts",
+      "default": "./dist/ax-ui/index.js"
     },
     "./ax-ui/utility-classes.css": "./dist/ax-ui/utility-classes.css",
     "./mo": {
-      "types": "./dist/mo/index.d.mts",
-      "default": "./dist/mo/index.mjs"
+      "types": "./dist/mo/index.d.ts",
+      "default": "./dist/mo/index.js"
     },
     "./mo-audio": {
-      "types": "./dist/mo-audio/index.d.mts",
-      "default": "./dist/mo-audio/index.mjs"
+      "types": "./dist/mo-audio/index.d.ts",
+      "default": "./dist/mo-audio/index.js"
     },
     "./mo-react": {
-      "types": "./dist/mo-react/index.d.mts",
-      "default": "./dist/mo-react/index.mjs"
+      "types": "./dist/mo-react/index.d.ts",
+      "default": "./dist/mo-react/index.js"
     },
     "./mo-synthesis": {
-      "types": "./dist/mo-synthesis/index.d.mts",
-      "default": "./dist/mo-synthesis/index.mjs"
+      "types": "./dist/mo-synthesis/index.d.ts",
+      "default": "./dist/mo-synthesis/index.js"
     },
     "./mx-audio": {
-      "types": "./dist/mx-audio/index.d.mts",
-      "default": "./dist/mx-audio/index.mjs"
+      "types": "./dist/mx-audio/index.d.ts",
+      "default": "./dist/mx-audio/index.js"
     }
   },
   "files": [

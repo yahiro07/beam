@@ -1,6 +1,11 @@
 import { defineConfig } from "tsdown";
 
 export default defineConfig({
+  platform: "browser",
+  format: ["esm"],
+  dts: true,
+  clean: true,
+  outDir: "dist",
   entry: {
     "ax/index": "src/ax/index.ts",
     "ax-react/index": "src/ax-react/index.ts",
@@ -11,10 +16,6 @@ export default defineConfig({
     "mo-synthesis/index": "src/mo-synthesis/index.ts",
     "mx-audio/index": "src/mx-audio/index.ts",
   },
-  format: ["esm"],
-  dts: true,
-  clean: true,
-  outDir: "dist",
   deps: {
     neverBundle: ["react", "react-dom"],
   },
