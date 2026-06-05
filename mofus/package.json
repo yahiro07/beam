@@ -2,7 +2,53 @@
   "name": "mofus",
   "type": "module",
   "private": true,
+  "main": "./dist/ax/index.mjs",
+  "exports": {
+    "./ax": {
+      "types": "./dist/ax/index.d.mts",
+      "default": "./dist/ax/index.mjs"
+    },
+    "./ax-solid": {
+      "types": "./dist/ax-solid/index.d.mts",
+      "default": "./dist/ax-solid/index.mjs"
+    },
+    "./ax-ui": {
+      "types": "./dist/ax-ui/index.d.mts",
+      "default": "./dist/ax-ui/index.mjs"
+    },
+    "./ax-ui/utility-classes.css": "./dist/ax-ui/utility-classes.css",
+    "./mo": {
+      "types": "./dist/mo/index.d.mts",
+      "default": "./dist/mo/index.mjs"
+    },
+    "./mo-audio": {
+      "types": "./dist/mo-audio/index.d.mts",
+      "default": "./dist/mo-audio/index.mjs"
+    },
+    "./mo-solid": {
+      "types": "./dist/mo-solid/index.d.mts",
+      "default": "./dist/mo-solid/index.mjs"
+    },
+    "./mo-synthesis": {
+      "types": "./dist/mo-synthesis/index.d.mts",
+      "default": "./dist/mo-synthesis/index.mjs"
+    },
+    "./mx-audio": {
+      "types": "./dist/mx-audio/index.d.mts",
+      "default": "./dist/mx-audio/index.mjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown && cp ../mofur/src/ax-ui/utility-classes.css dist/ax-ui/utility-classes.css"
+  },
   "peerDependencies": {
     "solid-js": "^1.9.12"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.2",
+    "typescript": "~6.0.3"
   }
 }
