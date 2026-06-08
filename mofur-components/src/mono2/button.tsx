@@ -1,29 +1,42 @@
 import clsx from "clsx";
+import { npx } from "mofur/ax-ui";
 import { ReactNode } from "react";
 
-export const Button = (props: {
+export const Button = ({
+  active,
+  text,
+  children,
+  onClick,
+  disabled,
+  asr = 1.6,
+}: {
   active?: boolean;
   text?: string;
   children?: ReactNode;
   onClick?: () => void;
   disabled?: boolean;
+  asr?: number;
 }) => {
+  const height = 36;
+  const width = height * asr;
   return (
     <button
       type="button"
-      onClick={props.onClick}
-      disabled={props.disabled}
+      onClick={onClick}
+      disabled={disabled}
       className={clsx(
-        "min-w-[60px] h-[36px] flex-c bg-gray-400 text-white border border-gray-600",
-        props.active && "bg-sky-600",
+        "flex-c bg-gray-400 text-white border border-gray-600",
+        active && "bg-sky-600",
       )}
       style={{
-        cursor: props.disabled ? "default" : "pointer",
-        opacity: props.disabled ? 0.5 : 1,
+        width: npx(width),
+        height: npx(height),
+        cursor: disabled ? "default" : "pointer",
+        opacity: disabled ? 0.5 : 1,
       }}
     >
-      {props.text && <span>{props.text}</span>}
-      {props.children}
+      {text && <span>{text}</span>}
+      {children}
     </button>
   );
 };
