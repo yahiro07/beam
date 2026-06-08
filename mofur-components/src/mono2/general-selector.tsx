@@ -11,10 +11,15 @@ export function GeneralSelector<T extends string | number>({
   value,
   onChange,
 }: Props<T>) {
+  const wrapOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const isNumber = typeof options[0].value === "number";
+    const newValue = isNumber ? parseFloat(e.target.value) : e.target.value;
+    onChange(newValue as T);
+  };
   return (
     <select
       value={value}
-      onChange={(e) => onChange(e.target.value as T)}
+      onChange={wrapOnChange}
       // className="border border-gray-400 px-1 py-2 w-[400px]"
     >
       {options.map((opt) => (
