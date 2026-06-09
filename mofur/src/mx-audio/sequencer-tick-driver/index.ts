@@ -41,7 +41,9 @@ function processSequencer(
   sequencer.processTickRange?.(ppqFrom, ppqTo);
 }
 
-export function createSequencerTickDriver(): SequencerTickDriver {
+export function createSequencerTickDriver(
+  timerIntervalMs: number = 25,
+): SequencerTickDriver {
   const state = { bpm: 120, previousTime: 0, ppqTick: 0 };
   const intervalTimer = createIntervalTimer();
   return {
@@ -71,7 +73,7 @@ export function createSequencerTickDriver(): SequencerTickDriver {
       intervalTimer.start(() => {
         const currentTime = performance.now();
         advanceTime(currentTime);
-      }, 5);
+      }, timerIntervalMs);
     },
     stop() {
       intervalTimer.stop();
