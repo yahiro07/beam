@@ -6,6 +6,8 @@ type Props<T extends string | number> = {
   value: T;
   onChange: (value: T) => void;
   reverseOptionsOrder?: boolean;
+  className?: string;
+  style?: React.CSSProperties;
 };
 
 export function GeneralSelector<T extends string | number>({
@@ -13,6 +15,8 @@ export function GeneralSelector<T extends string | number>({
   value,
   onChange,
   reverseOptionsOrder = false,
+  className,
+  style,
 }: Props<T>) {
   const orderedOptions = useMemo(() => {
     if (reverseOptionsOrder) {
@@ -30,7 +34,8 @@ export function GeneralSelector<T extends string | number>({
     <select
       value={value}
       onChange={wrapOnChange}
-      // className="border border-gray-400 px-1 py-2 w-[400px]"
+      className={className}
+      style={style}
     >
       {orderedOptions.map((opt) => (
         <option key={opt.value} value={opt.value}>
