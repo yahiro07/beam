@@ -16,3 +16,16 @@ export function removeArrayItem<T>(items: T[], item: T) {
 export function arrayExclude<T>(a: T[], b: T[]): T[] {
   return a.filter((it) => !b.includes(it));
 }
+
+export function getSortOrder<T>(
+  fn: (item: T) => number,
+  order: "asc" | "desc" = "asc",
+) {
+  return (a: T, b: T) => {
+    const va = fn(a);
+    const vb = fn(b);
+    if (va < vb) return order === "asc" ? -1 : 1;
+    if (va > vb) return order === "asc" ? 1 : -1;
+    return 0;
+  };
+}
