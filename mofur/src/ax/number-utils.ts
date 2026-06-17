@@ -59,3 +59,7 @@ export function degToRad(deg: number) {
 export function radToDeg(rad: number) {
   return rad * (180 / Math.PI);
 }
+
+export function inBetween(value: number, lo: number, hi: number) {
+  return lo <= value && value <= hi;
+}

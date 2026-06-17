@@ -29,3 +29,7 @@ export function getSortOrder<T>(
     return 0;
   };
 }
+
+export function uniqueArrayItems<T>(items: T[]): T[] {
+  return Array.from(new Set(items));
+}
