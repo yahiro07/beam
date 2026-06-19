@@ -12,10 +12,19 @@ export function getObjectKeys<T extends Record<string, unknown>>(obj: T) {
 
 export function pickObjectMembers<T extends {}, K extends keyof T>(
   obj: T,
-  keys: K[] | Record<K, 1 | true>
+  keys: K[] | Record<K, 1 | true>,
 ): Pick<T, K> {
-  const fieldNames = Array.isArray(keys) ? keys : Object.keys(keys) as K[];
+  const fieldNames = Array.isArray(keys) ? keys : (Object.keys(keys) as K[]);
   return Object.fromEntries(
-    fieldNames.map((fieldName) => [fieldName, obj[fieldName]])
+    fieldNames.map((fieldName) => [fieldName, obj[fieldName]]),
   ) as Pick<T, K>;
+}
+
+export function shallowEqual<T extends object>(
+  a: T | undefined,
+  b: T,
+): boolean {
+  if (a === undefined) return false;
+  const keys = Object.keys(b) as (keyof T)[];
+  return keys.every((key) => Object.is(a[key], b[key]));
 }
