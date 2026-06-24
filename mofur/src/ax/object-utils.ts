@@ -28,3 +28,10 @@ export function shallowEqual<T extends object>(
   const keys = Object.keys(b) as (keyof T)[];
   return keys.every((key) => Object.is(a[key], b[key]));
 }
+
+export function mapObjectEntries<P, Q>(
+  obj: Record<string, P>,
+  fn: (key: string, value: P) => Q,
+): Record<string, Q> {
+  return Object.fromEntries(Object.entries(obj).map(([k, v]) => [k, fn(k, v)]));
+}
