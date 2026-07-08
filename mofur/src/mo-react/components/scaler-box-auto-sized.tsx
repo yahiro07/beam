@@ -1,7 +1,13 @@
 import { ReactNode, useMemo, useRef } from "react";
 import { useDomElementSize } from "../hooks/use-dom-element-size.js";
 
-export function ScalerBoxAutoSized(props: { children: ReactNode }) {
+export function ScalerBoxAutoSized({
+  children,
+  overflow = "hidden",
+}: {
+  children: ReactNode;
+  overflow?: "visible" | "hidden";
+}) {
   const baseDivRef = useRef<HTMLDivElement>(null);
   const innerDivRef = useRef<HTMLDivElement>(null);
 
@@ -26,7 +32,7 @@ export function ScalerBoxAutoSized(props: { children: ReactNode }) {
         position: "relative",
         width: "100%",
         height: "100%",
-        overflow: "hidden",
+        overflow,
       }}
     >
       <div
@@ -39,7 +45,7 @@ export function ScalerBoxAutoSized(props: { children: ReactNode }) {
           visibility: isReady ? "visible" : "hidden",
         }}
       >
-        {props.children}
+        {children}
       </div>
     </div>
   );
