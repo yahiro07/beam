@@ -1,0 +1,8 @@
+{
+  "name": "mofus",
+  "type": "module",
+  "private": true,
+  "peerDependencies": {
+    "solid-js": "^1.9.12"
+  }
+}
