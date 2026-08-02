@@ -1,4 +1,3 @@
-/** @jsxImportSource solid-js/h */
 import { clampValue } from "@mofur/ax/number-utils.js";
 import { startDragSession } from "@mofur/ax-ui/drag-session.js";
 import { JSXElement } from "solid-js";

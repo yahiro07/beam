@@ -1,0 +1,44 @@
+{
+  "name": "mofur-components",
+  "type": "module",
+  "private": true,
+  "exports": {
+    "./mono1": {
+      "types": "./dist/mono1/index.d.ts",
+      "default": "./dist/mono1/index.js"
+    },
+    "./mono2": {
+      "types": "./dist/mono2/index.d.ts",
+      "default": "./dist/mono2/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "check": "node --version",
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "clsx": "^2.1.1",
+    "mofur": "file:../mofur"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@bosh-code/tsdown-plugin-inject-css": "^2.0.0",
+    "@bosh-code/tsdown-plugin-tailwindcss": "^1.0.1",
+    "@tsdown/css": "^0.22.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "tailwindcss": "^4.3.0",
+    "tsdown": "^0.22.2",
+    "typescript": "~6.0.3"
+  },
+  "volta": {
+    "node": "25.3.0"
+  }
+}

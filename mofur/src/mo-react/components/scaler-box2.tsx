@@ -1,38 +1,39 @@
 import { ReactNode, useMemo, useRef } from "react";
-import { useDomElementSize } from "../hooks/use-dom-element-size.js";
+import { npx } from "../../ax-ui";
+import { useDomElementSize } from "../hooks";
 
-export function ScalerBoxAutoSized({
-  children,
-  overflow = "hidden",
-}: {
+type Props = {
   children: ReactNode;
-  overflow?: "visible" | "hidden";
-}) {
-  const baseDivRef = useRef<HTMLDivElement>(null);
-  const innerDivRef = useRef<HTMLDivElement>(null);
+  destWidth: number;
+  destHeight: number;
+};
 
-  const outerSize = useDomElementSize(baseDivRef);
+export function ScalerBox2({
+  children,
+  destWidth: outputWidth,
+  destHeight: outputHeight,
+}: Props) {
+  const innerDivRef = useRef<HTMLDivElement>(null);
   const innerSize = useDomElementSize(innerDivRef);
 
   const scale = useMemo(() => {
-    if (!outerSize || !innerSize) return 1;
+    if (!innerSize) return 1;
     if (innerSize.width === 0 || innerSize.height === 0) return 1;
     return Math.min(
-      outerSize.width / innerSize.width,
-      outerSize.height / innerSize.height,
+      outputWidth / innerSize.width,
+      outputHeight / innerSize.height,
     );
-  }, [outerSize, innerSize]);
+  }, [outputWidth, outputHeight, innerSize]);
 
-  const isReady = outerSize && innerSize && innerSize.width > 0;
+  const isReady = innerSize && innerSize.width > 0;
 
   return (
     <div
-      ref={baseDivRef}
       style={{
         position: "relative",
-        width: "100%",
-        height: "100%",
-        overflow,
+        width: npx(outputWidth),
+        height: npx(outputHeight),
+        overflow: "hidden",
       }}
     >
       <div

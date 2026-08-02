@@ -9,6 +9,7 @@
       "dom.iterable"
     ],
     "jsx": "react-jsx",
+    "jsxImportSource": "solid-js",
     "strict": true,
     "noEmit": true,
     "skipLibCheck": true,

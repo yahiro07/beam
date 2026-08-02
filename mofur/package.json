@@ -1,8 +1,12 @@
 {
   "name": "mofur",
   "type": "module",
-  "private": true,
+  "version": "0.1.0",
+  "description": "Utility collection for web applications with React.",
+  "author": "yahiro",
+  "license": "MIT",
   "main": "./dist/ax/index.js",
+  "types": "./dist/ax/index.d.ts",
   "exports": {
     "./ax": {
       "types": "./dist/ax/index.d.ts",
@@ -16,6 +20,7 @@
       "types": "./dist/ax-ui/index.d.ts",
       "default": "./dist/ax-ui/index.js"
     },
+    "./ax-ui/utility-classes.css": "./dist/ax-ui/utility-classes.css",
     "./mo": {
       "types": "./dist/mo/index.d.ts",
       "default": "./dist/mo/index.js"
@@ -41,7 +46,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup"
+    "build": "tsdown && cp src/ax-ui/utility-classes.css dist/ax-ui/utility-classes.css"
   },
   "peerDependencies": {
     "react": "^19.0.0",
@@ -50,7 +55,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "tsup": "^8.5.1",
+    "tsdown": "^0.22.2",
     "typescript": "~6.0.3"
   }
 }
